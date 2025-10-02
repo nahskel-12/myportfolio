@@ -12,7 +12,7 @@ const About: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
             <img 
-              src="https://github.com/AshrafulShohab/Nahid-s-Portfolio/blob/main/profile.jpg" 
+              src="https://i.ibb.co.com/3ygPV3kZ/profile.jpg" 
               alt="Profile" 
               className="w-full h-full object-cover border-4 border-fuchsia-500 neon-border-pink animate-pulse" 
             />
