@@ -1,10 +1,10 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { FileCategory, type PortfolioFile } from '../types';
 import NeonCard from './NeonCard';
 import PDFIcon from './icons/PDFIcon';
 import ImageIcon from './icons/ImageIcon';
 import DocumentIcon from './icons/DocumentIcon';
+import PasswordModal from './PasswordModal';
 
 const filesData: PortfolioFile[] = [
   { id: 1, title: 'Neural Networks 101', description: 'An introductory PDF on the fundamentals of neural network architecture.', category: FileCategory.PDF, url: '#' },
@@ -29,6 +29,8 @@ const FileIcon = ({ category }: { category: FileCategory }) => {
 };
 
 const Files: React.FC = () => {
+  const [selectedFile, setSelectedFile] = useState<PortfolioFile | null>(null);
+
   return (
     <div className="animate-fade-in">
       <h2 className="text-4xl md:text-5xl font-bold uppercase mb-8 text-center neon-text-cyan glitch-effect" data-text="[Files Archive]">
@@ -43,18 +45,17 @@ const Files: React.FC = () => {
             </div>
             <p className="text-cyan-400/80 mb-4 flex-grow">{file.description}</p>
             <div className="mt-auto pt-4">
-              <a 
-                href={file.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <button 
+                onClick={() => setSelectedFile(file)}
                 className="inline-block w-full text-center bg-cyan-500/20 border-2 border-cyan-500 text-cyan-300 font-bold py-2 px-4 uppercase tracking-widest transition-all duration-300 hover:bg-cyan-500 hover:text-black hover:neon-border-cyan"
               >
                 // Access File
-              </a>
+              </button>
             </div>
           </NeonCard>
         ))}
       </div>
+      <PasswordModal file={selectedFile} onClose={() => setSelectedFile(null)} />
     </div>
   );
 };
