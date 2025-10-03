@@ -1,17 +1,26 @@
 // FIX: Import React to resolve 'Cannot find namespace 'React'' error.
 import React from 'react';
 
-export enum FileCategory {
+export enum FileType {
   PDF = 'PDF',
   IMAGE = 'Image',
   DOCUMENT = 'Document',
+}
+
+export enum FileSubject {
+    ENGLISH = 'English',
+    MATH = 'Math',
+    PHYSICS = 'Physics',
+    CHEMISTRY = 'Chemistry',
+    BIOLOGY = 'Biology',
 }
 
 export interface PortfolioFile {
   id: number;
   title: string;
   description: string;
-  category: FileCategory;
+  type: FileType;
+  subject: FileSubject;
   url: string; // URL for download/view
 }
 
