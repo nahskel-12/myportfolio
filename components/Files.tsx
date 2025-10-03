@@ -7,7 +7,7 @@ import DocumentIcon from './icons/DocumentIcon';
 import PasswordModal from './PasswordModal';
 
 const filesData: PortfolioFile[] = [
-  { id: 1, title: 'Neural Networks 101', description: 'An introductory PDF on the fundamentals of neural network architecture.', category: FileCategory.PDF, url: '#' },
+  { id: 1, title: 'Transformation of sentence sheet', description: 'Rules of transformation sentence.', category: FileCategory.PDF, url: 'https://drive.google.com/file/d/1SCMqWhzorgg4wtNfjp8TWBqJUzuS0Fg-/view?usp=drivesdk' },
   { id: 2, title: 'Cybernetic Augmentations Concept Art', description: 'High-resolution concept images of futuristic cybernetics.', category: FileCategory.IMAGE, url: '#' },
   { id: 3, title: 'Quantum Computing Research Paper', description: 'A whitepaper detailing recent breakthroughs in quantum state manipulation.', category: FileCategory.DOCUMENT, url: '#' },
   { id: 4, title: 'React Hooks Deep Dive', description: 'Advanced guide to mastering React Hooks for state management.', category: FileCategory.PDF, url: '#' },
