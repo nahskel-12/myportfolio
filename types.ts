@@ -13,6 +13,7 @@ export enum FileSubject {
     PHYSICS = 'Physics',
     CHEMISTRY = 'Chemistry',
     BIOLOGY = 'Biology',
+    SCIENCE = 'Science',
 }
 
 export interface PortfolioFile {
